@@ -5,4 +5,4 @@ publicKey = "public.pem"
 privateKey = "private.pem"
 extensionToAppend = ".locked"
 folderToEncrypt = 'Z:/Python malware/cible'
-timer = ('00:00:03')
+timer = ('00:00:10')
