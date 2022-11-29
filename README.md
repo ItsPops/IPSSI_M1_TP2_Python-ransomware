@@ -52,3 +52,15 @@ Le fichier ```variable.py``` contient:
 
 Le programme s'exécute simplement en saisissant ```python main.py```. 
 
+# Auteur
+
+Par François B, étudiant à l'école IPSSI 
+
+Merci à Christian A, enseignant chercheur
+
+# Licence
+
+Ce programme a été créé dans un but purement éducatif et n'est soumis en tant que tel à aucune licence.
+Les licences des bibliothèques et interprêteurs utilisés s'appliquent.
+
+
