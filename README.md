@@ -8,6 +8,17 @@
 - Décompte d'un timer pendant lequel on peut déchiffrer les données.
 - A l'issue du timer, les clés de chiffrement sont supprimées: la récupération est *définitivement* rendue impossible.
 
+# Etat d'avancement du projet
+
+- [x] Chiffrement des fichiers
+- [x] Traitement des extensions
+- [x] Interface graphique
+- [x] Suppression des clés à l'expiration de la rançon
+- [ ] Chiffrement récursif du contenu des dossiers
+- [ ] Traitement des fichiers ayant plus d'une extension (```exemple.tar.gz```)
+- [ ] Compatibilité arm/arm64
+- [ ] Vérification du paiement avant déchiffrement (lol)
+
 # Dépendances
 Ce programme repose sur les bibliothèques suivantes:
 
@@ -31,7 +42,7 @@ Ce programme repose sur les bibliothèques suivantes:
 
 # Modification des variables
 
-Le fichier ```variables.py``` contient:
+Le fichier ```variable.py``` contient:
 1) Le nom et/ou chemin des clés privées et publiques (défaut: ```private.pem``` & ```public.pem```)
 2) L'extension à rajouter aux fichiers chiffrés (défaut: ```.locked```)
 3) Le chemin du répertoire à chiffrer (bien le modifier en respectant le format de l'exemple donné)
@@ -40,3 +51,4 @@ Le fichier ```variables.py``` contient:
 # Exécution du programme
 
 Le programme s'exécute simplement en saisissant ```python main.py```. 
+

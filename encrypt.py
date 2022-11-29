@@ -24,5 +24,6 @@ def encrypt(fileToEncrypt, filePub):
     print('Encrypted file saved to ' + encryptedFile)
     filePub.close()
     fileData.close()
+    #Suppression du/des fichier(s) originaux
     os.remove(fileToEncrypt)
 
