@@ -5,7 +5,7 @@ def generate_pair():
     print("Generating new key pairs...")
 
     #Génération d'une paire de clés
-    key = RSA.generate(2046)
+    key = RSA.generate(keySize)
     openedPrivateKey = key.export_key()
     openedPublicKey = key.publickey().export_key()
 

